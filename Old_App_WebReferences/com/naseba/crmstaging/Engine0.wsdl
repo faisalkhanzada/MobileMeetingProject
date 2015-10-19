@@ -1,0 +1,1269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://newes.naseba.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Engine" targetNamespace="http://newes.naseba.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://crmstaging.naseba.com/Engine.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://newes.naseba.com/Imports">
+      <xsd:import schemaLocation="http://crmstaging.naseba.com/Engine.svc?xsd=xsd0" namespace="http://newes.naseba.com" />
+      <xsd:import schemaLocation="http://crmstaging.naseba.com/Engine.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://crmstaging.naseba.com/Engine.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CrmEngine.Classes" />
+      <xsd:import schemaLocation="http://crmstaging.naseba.com/Engine.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEngine_GetVisa_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVisa" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetVisa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVisaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateVisa_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVisa" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateVisa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVisaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateVisaScan_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVisaScan" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateVisaScan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVisaScanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdatePassportScan_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePassportScan" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdatePassportScan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePassportScanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetGuideLines_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGuideLines" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetGuideLines_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGuideLinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateGuideLines_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGuideLines" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateGuideLines_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGuideLinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateGuideLineDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGuideLineDoc" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateGuideLineDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGuideLineDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddConract_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddConract" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddConract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddConractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContract" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContract" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetEventContracts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventContracts" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetEventContracts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventContractsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAttendeeContracts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendeeContracts" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAttendeeContracts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendeeContractsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetMeetingSlots_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMeetingSlots" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetMeetingSlots_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMeetingSlotsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAllMeetingSlots_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMeetingSlots" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAllMeetingSlots_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMeetingSlotsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAllNasebaUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllNasebaUsers" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAllNasebaUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllNasebaUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetNasebaUsersByOffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNasebaUsersByOffice" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetNasebaUsersByOffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNasebaUsersByOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAllEmployeesFromDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeesFromDB" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAllEmployeesFromDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeesFromDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_SynchEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:SynchEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_SynchEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetWorldCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorldCountries" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetWorldCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorldCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_StripCompaniesMetaData_InputMessage">
+    <wsdl:part name="parameters" element="tns:StripCompaniesMetaData" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_StripCompaniesMetaData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StripCompaniesMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_InsertMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMessage" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_InsertMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAllContactMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContactMessages" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAllContactMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContactMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetPageMessagesByRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageMessagesByRead" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetPageMessagesByRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageMessagesByReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetPageMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageMessages" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetPageMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetPageMessagesCountByRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageMessagesCountByRead" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetPageMessagesCountByRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageMessagesCountByReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetMessagesCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessagesCount" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetMessagesCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessagesCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetMessagesCountByType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessagesCountByType" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetMessagesCountByType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessagesCountByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_ChangeMessageReadStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeMessageReadStatus" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_ChangeMessageReadStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeMessageReadStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetContactDemography_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactDemography" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetContactDemography_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactDemographyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetInvitedAttendees_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvitedAttendees" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetInvitedAttendees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvitedAttendeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetFeedBack_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeedBack" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetFeedBack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeedBackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateEventFeedback_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEventFeedback" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateEventFeedback_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEventFeedbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateTrainingFeedback_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTrainingFeedback" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateTrainingFeedback_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTrainingFeedbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateSpeakerFeedback_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSpeakerFeedback" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateSpeakerFeedback_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSpeakerFeedbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetSpeakerReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpeakerReview" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetSpeakerReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpeakerReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddAttendeeNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAttendeeNote" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddAttendeeNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAttendeeNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAttendeeNotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendeeNotes" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAttendeeNotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendeeNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddAttendedWorkshop_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAttendedWorkshop" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddAttendedWorkshop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAttendedWorkshopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetEventAttendedWorkshops_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventAttendedWorkshops" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetEventAttendedWorkshops_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventAttendedWorkshopsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteAttendedWorkshop_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAttendedWorkshop" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteAttendedWorkshop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAttendedWorkshopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMessage" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetCredentials_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredentials" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetCredentials_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredentialsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_Schedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:Schedule" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_Schedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_ManualSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManualSchedule" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_ManualSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManualScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddAdditionalMeeting_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAdditionalMeeting" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddAdditionalMeeting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAdditionalMeetingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetEventMeetings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventMeetings" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetEventMeetings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventMeetingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAttendeeMeetings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendeeMeetings" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAttendeeMeetings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendeeMeetingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteAllMeetings_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllMeetings" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteAllMeetings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllMeetingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteMeeting_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMeeting" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteMeeting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMeetingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateMeetingStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMeetingStatus" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateMeetingStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMeetingStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetOpenBusinessMeetings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenBusinessMeetings" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetOpenBusinessMeetings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenBusinessMeetingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAttendeeOpenBusinessMeetings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendeeOpenBusinessMeetings" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAttendeeOpenBusinessMeetings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendeeOpenBusinessMeetingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddBusinessMeeting_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBusinessMeeting" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddBusinessMeeting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBusinessMeetingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateOpenBusinessMeeting_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOpenBusinessMeeting" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateOpenBusinessMeeting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOpenBusinessMeetingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_ProposeNewTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProposeNewTime" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_ProposeNewTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProposeNewTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAllSelectedOptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSelectedOptions" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAllSelectedOptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSelectedOptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddSelectedOptionSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSelectedOptionSession" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddSelectedOptionSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSelectedOptionSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAccomodation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccomodation" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAccomodation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccomodationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateAccomodation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccomodation" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateAccomodation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccomodationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateAccomodationDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccomodationDocument" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateAccomodationDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccomodationDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetShipmentDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShipmentDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetShipmentDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShipmentDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateShipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShipment" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateShipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddShipmentConsignment_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddShipmentConsignment" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddShipmentConsignment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddShipmentConsignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateShipmentConsignment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShipmentConsignment" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateShipmentConsignment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShipmentConsignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAttendeeShipmentConsignments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendeeShipmentConsignments" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAttendeeShipmentConsignments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendeeShipmentConsignmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetShipmentConsignment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShipmentConsignment" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetShipmentConsignment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShipmentConsignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteShipmentConsignment_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShipmentConsignment" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteShipmentConsignment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShipmentConsignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddConsigmentShipmentItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddConsigmentShipmentItem" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddConsigmentShipmentItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddConsigmentShipmentItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateConsigmentShipmentItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConsigmentShipmentItem" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateConsigmentShipmentItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConsigmentShipmentItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetConsigmentShipmentItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsigmentShipmentItems" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetConsigmentShipmentItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsigmentShipmentItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetConsigmentShipmentItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsigmentShipmentItem" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetConsigmentShipmentItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsigmentShipmentItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteConsigmentShipmentItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteConsigmentShipmentItem" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteConsigmentShipmentItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteConsigmentShipmentItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetFaqByEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFaqByEvent" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetFaqByEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFaqByEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateFaq_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFaq" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateFaq_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFaqResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetSpecialFunctions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialFunctions" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetSpecialFunctions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialFunctionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateSpecialFunctions_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSpecialFunctions" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateSpecialFunctions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSpecialFunctionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetVisaDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVisaDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetVisaDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVisaDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateVisaDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVisaDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateVisaDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVisaDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateVisaAppForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVisaAppForm" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateVisaAppForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVisaAppFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateCredCardAuthForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCredCardAuthForm" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateCredCardAuthForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCredCardAuthFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddVisa_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddVisa" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddVisa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddVisaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetVisas_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVisas" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetVisas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVisasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_WebLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebLogin" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_WebLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetYears_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetYears" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetYears_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetYearsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvents" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetEventContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventContacts" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetEventContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetFormat_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFormat" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetFormat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFormatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetContactEventFormats_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactEventFormats" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetContactEventFormats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactEventFormatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateFormat_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFormat" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateFormat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFormatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetOptionSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionSet" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetOptionSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddAgenda_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAgenda" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddAgenda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAgendaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetEventAgendas_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventAgendas" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetEventAgendas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventAgendasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteAgenda_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAgenda" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteAgenda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAgendaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddAgendaDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAgendaDay" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddAgendaDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAgendaDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateAgendaDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAgendaDay" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateAgendaDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAgendaDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteAgendaDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAgendaDay" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteAgendaDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAgendaDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSession" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSession" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddSessionOption_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSessionOption" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddSessionOption_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSessionOptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateSessionOption_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSessionOption" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateSessionOption_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSessionOptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSession" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteSessionOption_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSessionOption" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteSessionOption_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSessionOptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetWalkIns_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWalkIns" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetWalkIns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWalkInsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAttendees_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendees" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAttendees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateRegisteredAttendee_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegisteredAttendee" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateRegisteredAttendee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegisteredAttendeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddWalkin_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddWalkin" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddWalkin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddWalkinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateWalkin_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWalkin" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateWalkin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWalkinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteAttendee_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAttendee" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteAttendee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAttendeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateRegisteredAttendeeOffline_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegisteredAttendeeOffline" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateRegisteredAttendeeOffline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegisteredAttendeeOfflineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddWalkinOffline_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddWalkinOffline" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddWalkinOffline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddWalkinOfflineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateWalkinOffline_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWalkinOffline" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateWalkinOffline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWalkinOfflineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AuthenticateContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateContact" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AuthenticateContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_RetrieveContactPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveContactPassword" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_RetrieveContactPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveContactPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddMeetingChoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMeetingChoice" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddMeetingChoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMeetingChoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetEventMeetingChoices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventMeetingChoices" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetEventMeetingChoices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventMeetingChoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteMeetingChoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMeetingChoice" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_DeleteMeetingChoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMeetingChoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAttendeeMeetingChoices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendeeMeetingChoices" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAttendeeMeetingChoices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendeeMeetingChoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateChoicePriority_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateChoicePriority" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_UpdateChoicePriority_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateChoicePriorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAllMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMessages" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_GetAllMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmail" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddSMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSMS" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_AddSMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_SetSentEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSentEmail" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_SetSentEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSentEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_SetSentSMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSentSMS" />
+  </wsdl:message>
+  <wsdl:message name="IEngine_SetSentSMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSentSMSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEngine">
+    <wsdl:operation name="GetVisa">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetVisa" message="tns:IEngine_GetVisa_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetVisaResponse" message="tns:IEngine_GetVisa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVisa">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateVisa" message="tns:IEngine_UpdateVisa_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateVisaResponse" message="tns:IEngine_UpdateVisa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVisaScan">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateVisaScan" message="tns:IEngine_UpdateVisaScan_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateVisaScanResponse" message="tns:IEngine_UpdateVisaScan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassportScan">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdatePassportScan" message="tns:IEngine_UpdatePassportScan_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdatePassportScanResponse" message="tns:IEngine_UpdatePassportScan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGuideLines">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetGuideLines" message="tns:IEngine_GetGuideLines_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetGuideLinesResponse" message="tns:IEngine_GetGuideLines_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGuideLines">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateGuideLines" message="tns:IEngine_UpdateGuideLines_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateGuideLinesResponse" message="tns:IEngine_UpdateGuideLines_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGuideLineDoc">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateGuideLineDoc" message="tns:IEngine_UpdateGuideLineDoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateGuideLineDocResponse" message="tns:IEngine_UpdateGuideLineDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddConract">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddConract" message="tns:IEngine_AddConract_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddConractResponse" message="tns:IEngine_AddConract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContract">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateContract" message="tns:IEngine_UpdateContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateContractResponse" message="tns:IEngine_UpdateContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInvoice">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateInvoice" message="tns:IEngine_UpdateInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateInvoiceResponse" message="tns:IEngine_UpdateInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContract">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/DeleteContract" message="tns:IEngine_DeleteContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/DeleteContractResponse" message="tns:IEngine_DeleteContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventContracts">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetEventContracts" message="tns:IEngine_GetEventContracts_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetEventContractsResponse" message="tns:IEngine_GetEventContracts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendeeContracts">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetAttendeeContracts" message="tns:IEngine_GetAttendeeContracts_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetAttendeeContractsResponse" message="tns:IEngine_GetAttendeeContracts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMeetingSlots">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetMeetingSlots" message="tns:IEngine_GetMeetingSlots_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetMeetingSlotsResponse" message="tns:IEngine_GetMeetingSlots_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMeetingSlots">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetAllMeetingSlots" message="tns:IEngine_GetAllMeetingSlots_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetAllMeetingSlotsResponse" message="tns:IEngine_GetAllMeetingSlots_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllNasebaUsers">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetAllNasebaUsers" message="tns:IEngine_GetAllNasebaUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetAllNasebaUsersResponse" message="tns:IEngine_GetAllNasebaUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNasebaUsersByOffice">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetNasebaUsersByOffice" message="tns:IEngine_GetNasebaUsersByOffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetNasebaUsersByOfficeResponse" message="tns:IEngine_GetNasebaUsersByOffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeesFromDB">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetAllEmployeesFromDB" message="tns:IEngine_GetAllEmployeesFromDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetAllEmployeesFromDBResponse" message="tns:IEngine_GetAllEmployeesFromDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SynchEmployee">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/SynchEmployee" message="tns:IEngine_SynchEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/SynchEmployeeResponse" message="tns:IEngine_SynchEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorldCountries">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetWorldCountries" message="tns:IEngine_GetWorldCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetWorldCountriesResponse" message="tns:IEngine_GetWorldCountries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StripCompaniesMetaData">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/StripCompaniesMetaData" message="tns:IEngine_StripCompaniesMetaData_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/StripCompaniesMetaDataResponse" message="tns:IEngine_StripCompaniesMetaData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMessage">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/InsertMessage" message="tns:IEngine_InsertMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/InsertMessageResponse" message="tns:IEngine_InsertMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContactMessages">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetAllContactMessages" message="tns:IEngine_GetAllContactMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetAllContactMessagesResponse" message="tns:IEngine_GetAllContactMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPageMessagesByRead">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetPageMessagesByRead" message="tns:IEngine_GetPageMessagesByRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetPageMessagesByReadResponse" message="tns:IEngine_GetPageMessagesByRead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPageMessages">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetPageMessages" message="tns:IEngine_GetPageMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetPageMessagesResponse" message="tns:IEngine_GetPageMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPageMessagesCountByRead">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetPageMessagesCountByRead" message="tns:IEngine_GetPageMessagesCountByRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetPageMessagesCountByReadResponse" message="tns:IEngine_GetPageMessagesCountByRead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessagesCount">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetMessagesCount" message="tns:IEngine_GetMessagesCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetMessagesCountResponse" message="tns:IEngine_GetMessagesCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessagesCountByType">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetMessagesCountByType" message="tns:IEngine_GetMessagesCountByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetMessagesCountByTypeResponse" message="tns:IEngine_GetMessagesCountByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeMessageReadStatus">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/ChangeMessageReadStatus" message="tns:IEngine_ChangeMessageReadStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/ChangeMessageReadStatusResponse" message="tns:IEngine_ChangeMessageReadStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContactDemography">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetContactDemography" message="tns:IEngine_GetContactDemography_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetContactDemographyResponse" message="tns:IEngine_GetContactDemography_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvitedAttendees">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetInvitedAttendees" message="tns:IEngine_GetInvitedAttendees_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetInvitedAttendeesResponse" message="tns:IEngine_GetInvitedAttendees_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFeedBack">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetFeedBack" message="tns:IEngine_GetFeedBack_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetFeedBackResponse" message="tns:IEngine_GetFeedBack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEventFeedback">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateEventFeedback" message="tns:IEngine_UpdateEventFeedback_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateEventFeedbackResponse" message="tns:IEngine_UpdateEventFeedback_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTrainingFeedback">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateTrainingFeedback" message="tns:IEngine_UpdateTrainingFeedback_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateTrainingFeedbackResponse" message="tns:IEngine_UpdateTrainingFeedback_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSpeakerFeedback">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateSpeakerFeedback" message="tns:IEngine_UpdateSpeakerFeedback_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateSpeakerFeedbackResponse" message="tns:IEngine_UpdateSpeakerFeedback_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeakerReview">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetSpeakerReview" message="tns:IEngine_GetSpeakerReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetSpeakerReviewResponse" message="tns:IEngine_GetSpeakerReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAttendeeNote">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddAttendeeNote" message="tns:IEngine_AddAttendeeNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddAttendeeNoteResponse" message="tns:IEngine_AddAttendeeNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendeeNotes">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetAttendeeNotes" message="tns:IEngine_GetAttendeeNotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetAttendeeNotesResponse" message="tns:IEngine_GetAttendeeNotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAttendedWorkshop">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddAttendedWorkshop" message="tns:IEngine_AddAttendedWorkshop_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddAttendedWorkshopResponse" message="tns:IEngine_AddAttendedWorkshop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventAttendedWorkshops">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetEventAttendedWorkshops" message="tns:IEngine_GetEventAttendedWorkshops_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetEventAttendedWorkshopsResponse" message="tns:IEngine_GetEventAttendedWorkshops_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttendedWorkshop">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/DeleteAttendedWorkshop" message="tns:IEngine_DeleteAttendedWorkshop_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/DeleteAttendedWorkshopResponse" message="tns:IEngine_DeleteAttendedWorkshop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessage">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/DeleteMessage" message="tns:IEngine_DeleteMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/DeleteMessageResponse" message="tns:IEngine_DeleteMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredentials">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetCredentials" message="tns:IEngine_GetCredentials_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetCredentialsResponse" message="tns:IEngine_GetCredentials_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Schedule">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/Schedule" message="tns:IEngine_Schedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/ScheduleResponse" message="tns:IEngine_Schedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManualSchedule">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/ManualSchedule" message="tns:IEngine_ManualSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/ManualScheduleResponse" message="tns:IEngine_ManualSchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAdditionalMeeting">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddAdditionalMeeting" message="tns:IEngine_AddAdditionalMeeting_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddAdditionalMeetingResponse" message="tns:IEngine_AddAdditionalMeeting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventMeetings">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetEventMeetings" message="tns:IEngine_GetEventMeetings_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetEventMeetingsResponse" message="tns:IEngine_GetEventMeetings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendeeMeetings">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetAttendeeMeetings" message="tns:IEngine_GetAttendeeMeetings_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetAttendeeMeetingsResponse" message="tns:IEngine_GetAttendeeMeetings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllMeetings">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/DeleteAllMeetings" message="tns:IEngine_DeleteAllMeetings_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/DeleteAllMeetingsResponse" message="tns:IEngine_DeleteAllMeetings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMeeting">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/DeleteMeeting" message="tns:IEngine_DeleteMeeting_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/DeleteMeetingResponse" message="tns:IEngine_DeleteMeeting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMeetingStatus">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateMeetingStatus" message="tns:IEngine_UpdateMeetingStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateMeetingStatusResponse" message="tns:IEngine_UpdateMeetingStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenBusinessMeetings">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetOpenBusinessMeetings" message="tns:IEngine_GetOpenBusinessMeetings_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetOpenBusinessMeetingsResponse" message="tns:IEngine_GetOpenBusinessMeetings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendeeOpenBusinessMeetings">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetAttendeeOpenBusinessMeetings" message="tns:IEngine_GetAttendeeOpenBusinessMeetings_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetAttendeeOpenBusinessMeetingsResponse" message="tns:IEngine_GetAttendeeOpenBusinessMeetings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBusinessMeeting">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddBusinessMeeting" message="tns:IEngine_AddBusinessMeeting_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddBusinessMeetingResponse" message="tns:IEngine_AddBusinessMeeting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOpenBusinessMeeting">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateOpenBusinessMeeting" message="tns:IEngine_UpdateOpenBusinessMeeting_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateOpenBusinessMeetingResponse" message="tns:IEngine_UpdateOpenBusinessMeeting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProposeNewTime">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/ProposeNewTime" message="tns:IEngine_ProposeNewTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/ProposeNewTimeResponse" message="tns:IEngine_ProposeNewTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSelectedOptions">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetAllSelectedOptions" message="tns:IEngine_GetAllSelectedOptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetAllSelectedOptionsResponse" message="tns:IEngine_GetAllSelectedOptions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSelectedOptionSession">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddSelectedOptionSession" message="tns:IEngine_AddSelectedOptionSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddSelectedOptionSessionResponse" message="tns:IEngine_AddSelectedOptionSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccomodation">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetAccomodation" message="tns:IEngine_GetAccomodation_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetAccomodationResponse" message="tns:IEngine_GetAccomodation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccomodation">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateAccomodation" message="tns:IEngine_UpdateAccomodation_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateAccomodationResponse" message="tns:IEngine_UpdateAccomodation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccomodationDocument">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateAccomodationDocument" message="tns:IEngine_UpdateAccomodationDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateAccomodationDocumentResponse" message="tns:IEngine_UpdateAccomodationDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShipmentDetails">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetShipmentDetails" message="tns:IEngine_GetShipmentDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetShipmentDetailsResponse" message="tns:IEngine_GetShipmentDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShipment">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateShipment" message="tns:IEngine_UpdateShipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateShipmentResponse" message="tns:IEngine_UpdateShipment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddShipmentConsignment">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddShipmentConsignment" message="tns:IEngine_AddShipmentConsignment_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddShipmentConsignmentResponse" message="tns:IEngine_AddShipmentConsignment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShipmentConsignment">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateShipmentConsignment" message="tns:IEngine_UpdateShipmentConsignment_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateShipmentConsignmentResponse" message="tns:IEngine_UpdateShipmentConsignment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendeeShipmentConsignments">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetAttendeeShipmentConsignments" message="tns:IEngine_GetAttendeeShipmentConsignments_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetAttendeeShipmentConsignmentsResponse" message="tns:IEngine_GetAttendeeShipmentConsignments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShipmentConsignment">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetShipmentConsignment" message="tns:IEngine_GetShipmentConsignment_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetShipmentConsignmentResponse" message="tns:IEngine_GetShipmentConsignment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShipmentConsignment">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/DeleteShipmentConsignment" message="tns:IEngine_DeleteShipmentConsignment_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/DeleteShipmentConsignmentResponse" message="tns:IEngine_DeleteShipmentConsignment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddConsigmentShipmentItem">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddConsigmentShipmentItem" message="tns:IEngine_AddConsigmentShipmentItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddConsigmentShipmentItemResponse" message="tns:IEngine_AddConsigmentShipmentItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConsigmentShipmentItem">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateConsigmentShipmentItem" message="tns:IEngine_UpdateConsigmentShipmentItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateConsigmentShipmentItemResponse" message="tns:IEngine_UpdateConsigmentShipmentItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsigmentShipmentItems">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetConsigmentShipmentItems" message="tns:IEngine_GetConsigmentShipmentItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetConsigmentShipmentItemsResponse" message="tns:IEngine_GetConsigmentShipmentItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsigmentShipmentItem">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetConsigmentShipmentItem" message="tns:IEngine_GetConsigmentShipmentItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetConsigmentShipmentItemResponse" message="tns:IEngine_GetConsigmentShipmentItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteConsigmentShipmentItem">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/DeleteConsigmentShipmentItem" message="tns:IEngine_DeleteConsigmentShipmentItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/DeleteConsigmentShipmentItemResponse" message="tns:IEngine_DeleteConsigmentShipmentItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFaqByEvent">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetFaqByEvent" message="tns:IEngine_GetFaqByEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetFaqByEventResponse" message="tns:IEngine_GetFaqByEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFaq">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateFaq" message="tns:IEngine_UpdateFaq_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateFaqResponse" message="tns:IEngine_UpdateFaq_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialFunctions">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetSpecialFunctions" message="tns:IEngine_GetSpecialFunctions_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetSpecialFunctionsResponse" message="tns:IEngine_GetSpecialFunctions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSpecialFunctions">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateSpecialFunctions" message="tns:IEngine_UpdateSpecialFunctions_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateSpecialFunctionsResponse" message="tns:IEngine_UpdateSpecialFunctions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVisaDetails">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetVisaDetails" message="tns:IEngine_GetVisaDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetVisaDetailsResponse" message="tns:IEngine_GetVisaDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVisaDetails">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateVisaDetails" message="tns:IEngine_UpdateVisaDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateVisaDetailsResponse" message="tns:IEngine_UpdateVisaDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVisaAppForm">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateVisaAppForm" message="tns:IEngine_UpdateVisaAppForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateVisaAppFormResponse" message="tns:IEngine_UpdateVisaAppForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCredCardAuthForm">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateCredCardAuthForm" message="tns:IEngine_UpdateCredCardAuthForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateCredCardAuthFormResponse" message="tns:IEngine_UpdateCredCardAuthForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddVisa">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddVisa" message="tns:IEngine_AddVisa_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddVisaResponse" message="tns:IEngine_AddVisa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVisas">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetVisas" message="tns:IEngine_GetVisas_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetVisasResponse" message="tns:IEngine_GetVisas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/Login" message="tns:IEngine_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/LoginResponse" message="tns:IEngine_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebLogin">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/WebLogin" message="tns:IEngine_WebLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/WebLoginResponse" message="tns:IEngine_WebLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYears">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetYears" message="tns:IEngine_GetYears_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetYearsResponse" message="tns:IEngine_GetYears_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvents">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetEvents" message="tns:IEngine_GetEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetEventsResponse" message="tns:IEngine_GetEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventContacts">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetEventContacts" message="tns:IEngine_GetEventContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetEventContactsResponse" message="tns:IEngine_GetEventContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFormat">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetFormat" message="tns:IEngine_GetFormat_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetFormatResponse" message="tns:IEngine_GetFormat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContactEventFormats">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetContactEventFormats" message="tns:IEngine_GetContactEventFormats_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetContactEventFormatsResponse" message="tns:IEngine_GetContactEventFormats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFormat">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateFormat" message="tns:IEngine_UpdateFormat_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateFormatResponse" message="tns:IEngine_UpdateFormat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionSet">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetOptionSet" message="tns:IEngine_GetOptionSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetOptionSetResponse" message="tns:IEngine_GetOptionSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAgenda">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddAgenda" message="tns:IEngine_AddAgenda_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddAgendaResponse" message="tns:IEngine_AddAgenda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventAgendas">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetEventAgendas" message="tns:IEngine_GetEventAgendas_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetEventAgendasResponse" message="tns:IEngine_GetEventAgendas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAgenda">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/DeleteAgenda" message="tns:IEngine_DeleteAgenda_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/DeleteAgendaResponse" message="tns:IEngine_DeleteAgenda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAgendaDay">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddAgendaDay" message="tns:IEngine_AddAgendaDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddAgendaDayResponse" message="tns:IEngine_AddAgendaDay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAgendaDay">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateAgendaDay" message="tns:IEngine_UpdateAgendaDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateAgendaDayResponse" message="tns:IEngine_UpdateAgendaDay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAgendaDay">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/DeleteAgendaDay" message="tns:IEngine_DeleteAgendaDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/DeleteAgendaDayResponse" message="tns:IEngine_DeleteAgendaDay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSession">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddSession" message="tns:IEngine_AddSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddSessionResponse" message="tns:IEngine_AddSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSession">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateSession" message="tns:IEngine_UpdateSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateSessionResponse" message="tns:IEngine_UpdateSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSessionOption">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddSessionOption" message="tns:IEngine_AddSessionOption_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddSessionOptionResponse" message="tns:IEngine_AddSessionOption_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSessionOption">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateSessionOption" message="tns:IEngine_UpdateSessionOption_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateSessionOptionResponse" message="tns:IEngine_UpdateSessionOption_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSession">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/DeleteSession" message="tns:IEngine_DeleteSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/DeleteSessionResponse" message="tns:IEngine_DeleteSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSessionOption">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/DeleteSessionOption" message="tns:IEngine_DeleteSessionOption_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/DeleteSessionOptionResponse" message="tns:IEngine_DeleteSessionOption_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWalkIns">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetWalkIns" message="tns:IEngine_GetWalkIns_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetWalkInsResponse" message="tns:IEngine_GetWalkIns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendees">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetAttendees" message="tns:IEngine_GetAttendees_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetAttendeesResponse" message="tns:IEngine_GetAttendees_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegisteredAttendee">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateRegisteredAttendee" message="tns:IEngine_UpdateRegisteredAttendee_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateRegisteredAttendeeResponse" message="tns:IEngine_UpdateRegisteredAttendee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddWalkin">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddWalkin" message="tns:IEngine_AddWalkin_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddWalkinResponse" message="tns:IEngine_AddWalkin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWalkin">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateWalkin" message="tns:IEngine_UpdateWalkin_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateWalkinResponse" message="tns:IEngine_UpdateWalkin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttendee">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/DeleteAttendee" message="tns:IEngine_DeleteAttendee_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/DeleteAttendeeResponse" message="tns:IEngine_DeleteAttendee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegisteredAttendeeOffline">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateRegisteredAttendeeOffline" message="tns:IEngine_UpdateRegisteredAttendeeOffline_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateRegisteredAttendeeOfflineResponse" message="tns:IEngine_UpdateRegisteredAttendeeOffline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddWalkinOffline">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddWalkinOffline" message="tns:IEngine_AddWalkinOffline_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddWalkinOfflineResponse" message="tns:IEngine_AddWalkinOffline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWalkinOffline">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateWalkinOffline" message="tns:IEngine_UpdateWalkinOffline_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateWalkinOfflineResponse" message="tns:IEngine_UpdateWalkinOffline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateContact">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AuthenticateContact" message="tns:IEngine_AuthenticateContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AuthenticateContactResponse" message="tns:IEngine_AuthenticateContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveContactPassword">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/RetrieveContactPassword" message="tns:IEngine_RetrieveContactPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/RetrieveContactPasswordResponse" message="tns:IEngine_RetrieveContactPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMeetingChoice">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddMeetingChoice" message="tns:IEngine_AddMeetingChoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddMeetingChoiceResponse" message="tns:IEngine_AddMeetingChoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventMeetingChoices">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetEventMeetingChoices" message="tns:IEngine_GetEventMeetingChoices_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetEventMeetingChoicesResponse" message="tns:IEngine_GetEventMeetingChoices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMeetingChoice">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/DeleteMeetingChoice" message="tns:IEngine_DeleteMeetingChoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/DeleteMeetingChoiceResponse" message="tns:IEngine_DeleteMeetingChoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendeeMeetingChoices">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetAttendeeMeetingChoices" message="tns:IEngine_GetAttendeeMeetingChoices_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetAttendeeMeetingChoicesResponse" message="tns:IEngine_GetAttendeeMeetingChoices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateChoicePriority">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/UpdateChoicePriority" message="tns:IEngine_UpdateChoicePriority_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/UpdateChoicePriorityResponse" message="tns:IEngine_UpdateChoicePriority_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessages">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/GetAllMessages" message="tns:IEngine_GetAllMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/GetAllMessagesResponse" message="tns:IEngine_GetAllMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmail">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddEmail" message="tns:IEngine_AddEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddEmailResponse" message="tns:IEngine_AddEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSMS">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/AddSMS" message="tns:IEngine_AddSMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/AddSMSResponse" message="tns:IEngine_AddSMS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSentEmail">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/SetSentEmail" message="tns:IEngine_SetSentEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/SetSentEmailResponse" message="tns:IEngine_SetSentEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSentSMS">
+      <wsdl:input wsaw:Action="http://newes.naseba.com/IEngine/SetSentSMS" message="tns:IEngine_SetSentSMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://newes.naseba.com/IEngine/SetSentSMSResponse" message="tns:IEngine_SetSentSMS_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="Engine">
+    <wsdl:port name="BasicHttpBinding_IEngine" binding="i0:BasicHttpBinding_IEngine">
+      <soap:address location="http://crmstaging.naseba.com/Engine.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

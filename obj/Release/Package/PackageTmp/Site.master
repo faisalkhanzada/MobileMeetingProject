@@ -1,0 +1,279 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="SiteMaster" Codebehind="Site.master.cs" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Naseba Meeting Updater</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href='css/tabulous.css' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://listjs.com/no-cdn/list.js"></script>
+
+<script type="text/javascript">
+    
+
+
+    jQuery(document).ready(function ($) {
+
+        // Find the toggles and hide their content
+        $('.toggle').each(function () {
+            $(this).find('.toggle-content').show();
+        });
+
+        // When a toggle is clicked (activated) show their content
+        $('.toggle a.toggle-trigger').click(function () {
+            var el = $(this), parent = el.closest('.toggle');
+
+            if (el.hasClass('active')) {
+                parent.find('.toggle-content').slideToggle();
+                el.removeClass('active');
+            }
+            else {
+                parent.find('.toggle-content').slideToggle();
+                el.addClass('active');
+            }
+            return false;
+        });
+
+    });  //End
+</script>
+<script src="js/jquery.popupoverlay.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#my_tooltip').popup({
+            type: 'tooltip',
+            vertical: 'bottom',
+            transition: '0.3s all 0s',
+            tooltipanchor: $('#my_tooltip_open')
+        });
+
+    });
+
+
+
+</script>
+<style>
+.mtrl_search {
+  margin: 16px 0 0 20px;
+  position: relative;
+}
+
+.close_serch {
+  background: url("images/pop-close.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  cursor: pointer;
+  height: 15px;
+  position: absolute;
+  right: 34px;
+  top: 15px;
+  width: 16px;
+  display:none;
+}
+</style>
+</head>
+
+<body>
+    <form id="Form1" runat="server"> 
+<div class="mainbobyinner">
+  <div class="maintextpart">
+      
+    <div class="maintopbar">
+      <div class="topback"><a href="" onclick="javascript:history.back(); return false;"><img src="images/backarrow.png" alt="back" border="0" /></a></div>
+      <div class="topeventname"><strong>
+          <asp:Label ID="lblyear" runat="server" Text="Label"></asp:Label></strong><asp:Label ID="lbleventname" runat="server" Text="Label"></asp:Label> </div>
+      <div class="topmodifysearch"><img src="images/Modify-Search.png" alt="Modify Search" /><a href="Selection.aspx">Modify Search</a></div>
+      <div class="topprofile"><a href="#my_tooltip" class="initialism my_tooltip_open btn btn-success" id="my_tooltip_open"><img src="images/profile-pic.png" alt="profile" border="0" /></a></div>
+      <div id="my_tooltip" class="signout">
+          <asp:LinkButton ID="LinkButtonlogout" runat="server" OnClick="LinkButtonlogout_Click">Signout</asp:LinkButton>
+          </div>
+
+      <div class="topmenu"><a href="#"><img src="images/menu.png" alt="menu" border="0" /></a></div>
+    </div>
+        
+          
+    <div class="clear"></div>
+    <div class="maintextleft">
+      <ul>
+        <li class="left_icon"><img src="images/dashboard-icon.png" alt="dashboard" /></li>
+        <a href="all_list.aspx?EvtId=<% Response.Write(evtid.Trim()); %>">
+          <li class="left_a">
+          <p><strong>All</strong><% Response.Write(Session["allcountcount"]); %></p>
+          </li>
+          </a>
+        <a href="vendor_list.aspx?EvtId=<% Response.Write(evtid.Trim()); %>">
+          <li class="left_v">
+          <p><strong class="lsname">V</strong><strong class="lfname">Vendors</strong><% Response.Write(Session["allvendorscount"]); %></p>
+        </li>
+          </a>
+        <a href="delegates_list.aspx?EvtId=<% Response.Write(evtid.Trim()); %>">
+          <li class="left_d">
+          <p><strong class="lsname">D</strong><strong class="lfname">Delegates</strong><% Response.Write(Session["alldelegatescount"]); %></p>
+        </li>
+          </a>
+          <a href="speaker_list.aspx?EvtId=<% Response.Write(evtid.Trim()); %>">
+        <li class="left_s">
+          <p><strong class="lsname">S</strong><strong class="lfname">Speakers</strong><% Response.Write(Session["allspeakerscount"]); %></p>
+        </li>
+          </a>
+          <a href="partner_list.aspx?EvtId=<% Response.Write(evtid.Trim()); %>">
+        <li class="left_p">
+          <p><strong class="lsname">P</strong><strong class="lfname">Partner</strong><% Response.Write(Session["allpartnerscount"]); %></p>
+        </li>
+          </a>
+      </ul>
+    </div>
+           
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+   
+         
+
+    </asp:ContentPlaceHolder>
+                  </form>
+  </div>
+</div>
+   
+<link rel="stylesheet" href="css/jquery.range.css">
+<script src="js/jquery.range.js"></script>
+<script type="text/javascript">
+
+    var options = {
+        valueNames: ['ltbox3', 'ltbox2']
+    };
+
+    var userList = new List('users', options);
+
+
+    $('.range-slider').jRange({
+        from: 0,
+        to: 100,
+        step: 1,
+        scale: [0, 25, 50, 75, 100],
+        format: '%s',
+        width: 150,
+        showLabels: true,
+        isRange: true
+    });
+
+
+    $(".searchbox").keypress(function () {
+        $('.close_serch').show();
+    });
+
+    $('.close_serch').click(function () {
+        $(".searchbox").val('');
+        $('.close_serch').hide();
+    });
+
+    //attendee day1
+    $('#checkboxG21').change(function () {
+
+
+        if ($(this).is(':checked') == true) {
+            $(".venrow").each(function (index) {
+                console.log(this.id);
+                var id = this.id;
+
+                var attcountday1 = $('#'+id).data('attcountday1');
+                
+                if (attcountday1 == 0) {
+
+
+                    $("#"+id).hide();
+                }
+            });
+        }
+        else {
+            $(".venrow").show();
+        }
+
+
+
+
+        //hide other div u wish
+    });
+
+
+    //attendee day2
+    $('#checkboxG22').change(function () {
+
+
+        if ($(this).is(':checked') == true) {
+            $(".venrow").each(function (index) {
+                console.log(this.id);
+                var id = this.id;
+
+                var attcountday2 = $('#' + id).data('attcountday2');
+
+                if (attcountday2 == 0) {
+
+                    console.log(attcountday2);
+                    $("#" + id).hide();
+                }
+            });
+        }
+        else {
+            $(".venrow").show();
+        }
+
+    });
+
+    //meeting day1
+    $('#checkboxG23').change(function () {
+
+
+        if ($(this).is(':checked') == true) {
+            $(".venrow").each(function (index) {
+                console.log(this.id);
+                var id = this.id;
+
+                var meetingscountday1 = $('#' + id).data('meetingscountday1');
+
+                if (meetingscountday1 == 0) {
+
+                    //console.log(attcountday2);
+                    $("#" + id).hide();
+                }
+            });
+        }
+        else {
+            $(".venrow").show();
+        }
+
+    });
+
+    //meeting day2
+    $('#checkboxG24').change(function () {
+
+
+        if ($(this).is(':checked') == true) {
+            $(".venrow").each(function (index) {
+                console.log(this.id);
+                var id = this.id;
+
+                var meetingscountday2 = $('#' + id).data('meetingscountday2');
+
+                if (meetingscountday2 == 0) {
+
+                  //  console.log(attcountday2);
+                    $("#" + id).hide();
+                }
+            });
+        }
+        else {
+            $(".venrow").show();
+        }
+
+    });
+
+    //meeting all
+    $('#checkboxG25').change(function () {
+
+        $(".venrow").show();
+
+    });
+
+
+
+</script>
+</body>
+</html>

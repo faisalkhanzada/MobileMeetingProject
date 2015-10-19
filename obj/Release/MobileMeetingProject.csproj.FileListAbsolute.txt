@@ -1,0 +1,6 @@
+C:\Programming\A-Projects\MeetingUpdaterProject\MobileMeetingProject\bin\MobileMeetingProject.dll
+C:\Programming\A-Projects\MeetingUpdaterProject\MobileMeetingProject\bin\MobileMeetingProject.XmlSerializers.dll
+C:\Programming\A-Projects\MeetingUpdaterProject\MobileMeetingProject\bin\MobileMeetingProject.pdb
+C:\Programming\A-Projects\MeetingUpdaterProject\MobileMeetingProject\obj\Release\MobileMeetingProject.dll
+C:\Programming\A-Projects\MeetingUpdaterProject\MobileMeetingProject\obj\Release\MobileMeetingProject.pdb
+C:\Programming\A-Projects\MeetingUpdaterProject\MobileMeetingProject\obj\Release\MobileMeetingProject.XmlSerializers.dll

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="41ba9441-a1aa-4a27-abc1-a51929625a79" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://crmstaging.naseba.com/EngineRest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EngineRest.xsd" MetadataType="Schema" ID="a4610fcd-8b7f-4a78-80aa-3c6725f1c1a0" SourceId="1" SourceUrl="http://crmstaging.naseba.com/EngineRest.svc?xsd=xsd1" />
+    <MetadataFile FileName="EngineRest1.xsd" MetadataType="Schema" ID="d2d82d46-c41d-4b2b-8bdb-c1a6c15a1d0a" SourceId="1" SourceUrl="http://crmstaging.naseba.com/EngineRest.svc?xsd=xsd3" />
+    <MetadataFile FileName="EngineRest2.xsd" MetadataType="Schema" ID="6ed0c4ca-7ef2-479f-900b-58d5e9fdd9d7" SourceId="1" SourceUrl="http://crmstaging.naseba.com/EngineRest.svc?xsd=xsd0" />
+    <MetadataFile FileName="EngineRest.disco" MetadataType="Disco" ID="c856aa2b-57a7-4731-b782-7e46e7755e58" SourceId="1" SourceUrl="http://crmstaging.naseba.com/EngineRest.svc?disco" />
+    <MetadataFile FileName="EngineRest.wsdl" MetadataType="Wsdl" ID="11b19e77-c890-4188-888e-a7e78b5d4411" SourceId="1" SourceUrl="http://crmstaging.naseba.com/EngineRest.svc?wsdl" />
+    <MetadataFile FileName="EngineRest3.xsd" MetadataType="Schema" ID="9a202e36-2cb8-4649-a82a-a08cba53a7b7" SourceId="1" SourceUrl="http://crmstaging.naseba.com/EngineRest.svc?xsd=xsd2" />
+    <MetadataFile FileName="EngineRest1.wsdl" MetadataType="Wsdl" ID="80ad2342-6fab-4e03-b479-8a45c06c10cc" SourceId="1" SourceUrl="http://crmstaging.naseba.com/EngineRest.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

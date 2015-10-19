@@ -1,0 +1,9 @@
+C:\Programming\A-Projects\MeetingUpdaterProject\MobileMeetingProject\bin\MobileMeetingProject.dll
+C:\Programming\A-Projects\MeetingUpdaterProject\MobileMeetingProject\bin\MobileMeetingProject.pdb
+C:\Programming\A-Projects\MeetingUpdaterProject\MobileMeetingProject\obj\Debug\MobileMeetingProject.dll
+C:\Programming\A-Projects\MeetingUpdaterProject\MobileMeetingProject\obj\Debug\MobileMeetingProject.pdb
+F:\Naseeba Project\MeetingUpdaterProject\MobileMeetingProject\bin\MobileMeetingProject.dll
+F:\Naseeba Project\MeetingUpdaterProject\MobileMeetingProject\bin\MobileMeetingProject.pdb
+F:\Naseeba Project\MeetingUpdaterProject\MobileMeetingProject\obj\Debug\MobileMeetingProject.csprojResolveAssemblyReference.cache
+F:\Naseeba Project\MeetingUpdaterProject\MobileMeetingProject\obj\Debug\MobileMeetingProject.dll
+F:\Naseeba Project\MeetingUpdaterProject\MobileMeetingProject\obj\Debug\MobileMeetingProject.pdb

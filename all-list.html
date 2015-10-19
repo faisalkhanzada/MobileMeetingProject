@@ -1,0 +1,741 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Naseba Meeting Updater</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) { 
+
+	// Find the toggles and hide their content
+	$('.toggle').each(function(){
+		$(this).find('.toggle-content').show();
+	});
+
+	// When a toggle is clicked (activated) show their content
+	$('.toggle a.toggle-trigger').click(function(){
+		var el = $(this), parent = el.closest('.toggle');
+
+		if( el.hasClass('active') )
+		{
+			parent.find('.toggle-content').slideToggle();
+			el.removeClass('active');
+		}
+		else
+		{
+			parent.find('.toggle-content').slideToggle();
+			el.addClass('active');
+		}
+		return false;
+	});
+
+});  //End
+</script>
+<script src="js/jquery.popupoverlay.js"></script>
+<script>
+$(document).ready(function () {
+    $('#my_tooltip').popup({
+        type: 'tooltip',
+        vertical: 'bottom',
+        transition: '0.3s all 0s',
+        tooltipanchor: $('#my_tooltip_open')
+    });
+
+});
+</script>
+<style>
+.mtrl_search {
+  margin: 16px 0 0 20px;
+  position: relative;
+}
+
+.close_serch {
+  background: url("images/pop-close.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  cursor: pointer;
+  height: 15px;
+  position: absolute;
+  right: 34px;
+  top: 15px;
+  width: 16px;
+  display:none;
+}
+</style>
+</head>
+<body>
+<div class="mainbobyinner">
+  <div class="maintextpart">
+    <div class="maintopbar">
+      <div class="topback"><a href="#"><img src="images/backarrow.png" alt="back" border="0" /></a></div>
+      <div class="topeventname"><strong>2015</strong>6 Cyber Defence Summit - Dubai</div>
+      <div class="topmodifysearch"><img src="images/Modify-Search.png" alt="Modify Search" /><a href="#">Modify Search</a></div>
+      <div class="topprofile"><a href="#my_tooltip" class="initialism my_tooltip_open btn btn-success" id="my_tooltip_open"><img src="images/profile-pic.png" alt="profile" border="0" /></a></div>
+      <div id="my_tooltip" class="signout"><a href="#">Sign out</a></div>
+
+      <div class="topmenu"><a href="#"><img src="images/menu.png" alt="menu" border="0" /></a></div>
+    </div>
+    <div class="clear"></div>
+    <div class="maintextleft">
+      <ul>
+        <li class="left_icon"><img src="images/dashboard-icon.png" alt="dashboard" /></li>
+        <li class="left_a">
+          <p><strong>All</strong>145</p>
+        </li>
+        <li class="left_v">
+          <p><strong class="lsname">V</strong><strong class="lfname">Vendors</strong>60</p>
+        </li>
+        <li class="left_d">
+          <p><strong class="lsname">D</strong><strong class="lfname">Delegates</strong>10</p>
+        </li>
+        <li class="left_s">
+          <p><strong class="lsname">S</strong><strong class="lfname">Speakers</strong>7</p>
+        </li>
+        <li class="left_p">
+          <p><strong class="lsname">P</strong><strong class="lfname">Partner</strong>10</p>
+        </li>
+      </ul>
+    </div>
+    <div class="maintextright">
+      <div class="maintextright_left">
+        <div class="mtrl_search">
+          <input name="company_search" type="text" placeholder="Search company or individual" id="company_search" class="searchbox" />
+          <div class="close_serch"></div>
+        </div>
+        <div class="mtrl_attendance">
+          <div class="toggle">
+            <!-- Toggle Link -->
+            <a href="#" title="Title of Toggle" class="toggle-trigger">Attendance</a>
+            <!-- Toggle Content to display -->
+            <div class="toggle-content">
+              <input type="checkbox" name="checkboxG21" id="checkboxG21" class="css-checkbox" />
+              <label for="checkboxG21" class="css-label">Day 1</label>
+              <input type="checkbox" name="checkboxG22" id="checkboxG22" class="css-checkbox" />
+              <label for="checkboxG22" class="css-label">Day 2</label>
+            </div>
+            <!-- .toggle-content (end) -->
+          </div>
+          <div class="toggle">
+            <!-- Toggle Link -->
+            <a href="#" title="Title of Toggle" class="toggle-trigger">Meetings</a>
+            <!-- Toggle Content to display -->
+            <div class="toggle-content">
+              <input type="checkbox" name="checkboxG23" id="checkboxG23" class="css-checkbox" />
+              <label for="checkboxG23" class="css-label">Day 1</label>
+              <input type="checkbox" name="checkboxG24" id="checkboxG24" class="css-checkbox" />
+              <label for="checkboxG24" class="css-label">Day 2</label>
+              <input type="checkbox" name="checkboxG25" id="checkboxG25" class="css-checkbox" />
+              <label for="checkboxG25" class="css-label">All Day</label>
+            </div>
+            <!-- .toggle-content (end) -->
+          </div>
+          <div class="toggle">
+            <!-- Toggle Link -->
+            <a href="#" title="Title of Toggle" class="toggle-trigger">Meetings Attended</a>
+            <!-- Toggle Content to display -->
+            <div class="toggle-content">
+              <input class="range-slider" type="hidden" value="25,75"/>
+            </div>
+            <!-- .toggle-content (end) -->
+          </div>
+        </div>
+      </div>
+      <div class="maintextright_right alllisttable">
+        <div class="listtable listtabletop ">
+          <div class="ltbox6"><a href="#"></a></div>
+          <div class="ltbox1"><a href="#">table#</a></div>
+          <div class="ltbox2"><a href="#">Company</a></div>
+          <div class="ltbox3"><a href="#">representative</a></div>
+          <div class="ltbox4">
+            <div class="ltbox4top">scheduled<br />
+              meetings</div>
+            <div class="ltbox4bottom">
+              <div class="ltbox4left"><a href="#">day1</a></div>
+              <div class="ltbox4right"><a href="#">day2</a></div>
+            </div>
+          </div>
+          <div class="ltbox5">
+            <div class="ltbox4top">meetings<br />
+              attended</div>
+            <div class="ltbox4bottom">
+              <div class="ltbox4left"><a href="#">day1</a></div>
+              <div class="ltbox4right"><a href="#">day2</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="vtablelist">
+          <div class="listtable">
+            <div class="ltbox6">
+              <p><img src="images/d-icon.jpg" alt="" /></p>
+            </div>
+            <div class="ltbox1">
+              <p>3</p>
+            </div>
+            <div class="ltbox2">
+              <p>ACE Limited</p>
+            </div>
+            <div class="ltbox3">
+              <p><strong>Roshan Abdul</strong>Mohammed Kalam Rashid</p>
+            </div>
+            <div class="ltbox4">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>10</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>20</p>
+                </div>
+              </div>
+            </div>
+            <div class="ltbox5">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>7</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listtable">
+            <div class="ltbox6">
+              <p><img src="images/v-icon.jpg" alt="" /></p>
+            </div>
+            <div class="ltbox1">
+              <p>3</p>
+            </div>
+            <div class="ltbox2">
+              <p>ACE Limited</p>
+            </div>
+            <div class="ltbox3">
+              <p><strong>Roshan Abdul</strong>Mohammed Kalam Rashid</p>
+            </div>
+            <div class="ltbox4">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>10</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>20</p>
+                </div>
+              </div>
+            </div>
+            <div class="ltbox5">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>7</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listtable">
+            <div class="ltbox6">
+              <p><img src="images/s-icon.jpg" alt="" /></p>
+            </div>
+            <div class="ltbox1">
+              <p>3</p>
+            </div>
+            <div class="ltbox2">
+              <p>ACE Limited</p>
+            </div>
+            <div class="ltbox3">
+              <p><strong>Roshan Abdul</strong>Mohammed Kalam Rashid</p>
+            </div>
+            <div class="ltbox4">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>10</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>20</p>
+                </div>
+              </div>
+            </div>
+            <div class="ltbox5">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>7</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listtable">
+            <div class="ltbox6">
+              <p><img src="images/p-icon.jpg" alt="" /></p>
+            </div>
+            <div class="ltbox1">
+              <p>3</p>
+            </div>
+            <div class="ltbox2">
+              <p>ACE Limited</p>
+            </div>
+            <div class="ltbox3">
+              <p><strong>Roshan Abdul</strong>Mohammed Kalam Rashid</p>
+            </div>
+            <div class="ltbox4">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>10</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>20</p>
+                </div>
+              </div>
+            </div>
+            <div class="ltbox5">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>7</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listtable">
+            <div class="ltbox6">
+              <p><img src="images/d-icon.jpg" alt="" /></p>
+            </div>
+            <div class="ltbox1">
+              <p>3</p>
+            </div>
+            <div class="ltbox2">
+              <p>ACE Limited</p>
+            </div>
+            <div class="ltbox3">
+              <p><strong>Roshan Abdul</strong>Mohammed Kalam Rashid</p>
+            </div>
+            <div class="ltbox4">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>10</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>20</p>
+                </div>
+              </div>
+            </div>
+            <div class="ltbox5">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>7</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listtable">
+            <div class="ltbox6">
+              <p><img src="images/v-icon.jpg" alt="" /></p>
+            </div>
+            <div class="ltbox1">
+              <p>3</p>
+            </div>
+            <div class="ltbox2">
+              <p>ACE Limited</p>
+            </div>
+            <div class="ltbox3">
+              <p><strong>Roshan Abdul</strong>Mohammed Kalam Rashid</p>
+            </div>
+            <div class="ltbox4">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>10</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>20</p>
+                </div>
+              </div>
+            </div>
+            <div class="ltbox5">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>7</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listtable">
+            <div class="ltbox6">
+              <p><img src="images/s-icon.jpg" alt="" /></p>
+            </div>
+            <div class="ltbox1">
+              <p>3</p>
+            </div>
+            <div class="ltbox2">
+              <p>ACE Limited</p>
+            </div>
+            <div class="ltbox3">
+              <p><strong>Roshan Abdul</strong>Mohammed Kalam Rashid</p>
+            </div>
+            <div class="ltbox4">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>10</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>20</p>
+                </div>
+              </div>
+            </div>
+            <div class="ltbox5">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>7</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listtable">
+            <div class="ltbox6">
+              <p><img src="images/p-icon.jpg" alt="" /></p>
+            </div>
+            <div class="ltbox1">
+              <p>3</p>
+            </div>
+            <div class="ltbox2">
+              <p>ACE Limited</p>
+            </div>
+            <div class="ltbox3">
+              <p><strong>Roshan Abdul</strong>Mohammed Kalam Rashid</p>
+            </div>
+            <div class="ltbox4">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>10</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>20</p>
+                </div>
+              </div>
+            </div>
+            <div class="ltbox5">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>7</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listtable">
+            <div class="ltbox6">
+              <p><img src="images/d-icon.jpg" alt="" /></p>
+            </div>
+            <div class="ltbox1">
+              <p>3</p>
+            </div>
+            <div class="ltbox2">
+              <p>ACE Limited</p>
+            </div>
+            <div class="ltbox3">
+              <p><strong>Roshan Abdul</strong>Mohammed Kalam Rashid</p>
+            </div>
+            <div class="ltbox4">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>10</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>20</p>
+                </div>
+              </div>
+            </div>
+            <div class="ltbox5">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>7</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listtable">
+            <div class="ltbox6">
+              <p><img src="images/v-icon.jpg" alt="" /></p>
+            </div>
+            <div class="ltbox1">
+              <p>3</p>
+            </div>
+            <div class="ltbox2">
+              <p>ACE Limited</p>
+            </div>
+            <div class="ltbox3">
+              <p><strong>Roshan Abdul</strong>Mohammed Kalam Rashid</p>
+            </div>
+            <div class="ltbox4">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>10</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>20</p>
+                </div>
+              </div>
+            </div>
+            <div class="ltbox5">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>7</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listtable">
+            <div class="ltbox6">
+              <p><img src="images/s-icon.jpg" alt="" /></p>
+            </div>
+            <div class="ltbox1">
+              <p>3</p>
+            </div>
+            <div class="ltbox2">
+              <p>ACE Limited</p>
+            </div>
+            <div class="ltbox3">
+              <p><strong>Roshan Abdul</strong>Mohammed Kalam Rashid</p>
+            </div>
+            <div class="ltbox4">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>10</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>20</p>
+                </div>
+              </div>
+            </div>
+            <div class="ltbox5">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>7</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listtable">
+            <div class="ltbox6">
+              <p><img src="images/p-icon.jpg" alt="" /></p>
+            </div>
+            <div class="ltbox1">
+              <p>3</p>
+            </div>
+            <div class="ltbox2">
+              <p>ACE Limited</p>
+            </div>
+            <div class="ltbox3">
+              <p><strong>Roshan Abdul</strong>Mohammed Kalam Rashid</p>
+            </div>
+            <div class="ltbox4">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>10</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>20</p>
+                </div>
+              </div>
+            </div>
+            <div class="ltbox5">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>7</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listtable">
+            <div class="ltbox6">
+              <p><img src="images/d-icon.jpg" alt="" /></p>
+            </div>
+            <div class="ltbox1">
+              <p>3</p>
+            </div>
+            <div class="ltbox2">
+              <p>ACE Limited</p>
+            </div>
+            <div class="ltbox3">
+              <p><strong>Roshan Abdul</strong>Mohammed Kalam Rashid</p>
+            </div>
+            <div class="ltbox4">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>10</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>20</p>
+                </div>
+              </div>
+            </div>
+            <div class="ltbox5">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>7</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listtable">
+            <div class="ltbox6">
+              <p><img src="images/v-icon.jpg" alt="" /></p>
+            </div>
+            <div class="ltbox1">
+              <p>3</p>
+            </div>
+            <div class="ltbox2">
+              <p>ACE Limited</p>
+            </div>
+            <div class="ltbox3">
+              <p><strong>Roshan Abdul</strong>Mohammed Kalam Rashid</p>
+            </div>
+            <div class="ltbox4">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>10</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>20</p>
+                </div>
+              </div>
+            </div>
+            <div class="ltbox5">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>7</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listtable">
+            <div class="ltbox6">
+              <p><img src="images/s-icon.jpg" alt="" /></p>
+            </div>
+            <div class="ltbox1">
+              <p>3</p>
+            </div>
+            <div class="ltbox2">
+              <p>ACE Limited</p>
+            </div>
+            <div class="ltbox3">
+              <p><strong>Roshan Abdul</strong>Mohammed Kalam Rashid</p>
+            </div>
+            <div class="ltbox4">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>10</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>20</p>
+                </div>
+              </div>
+            </div>
+            <div class="ltbox5">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>7</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listtable">
+            <div class="ltbox6">
+              <p><img src="images/p-icon.jpg" alt="" /></p>
+            </div>
+            <div class="ltbox1">
+              <p>3</p>
+            </div>
+            <div class="ltbox2">
+              <p>ACE Limited</p>
+            </div>
+            <div class="ltbox3">
+              <p><strong>Roshan Abdul</strong>Mohammed Kalam Rashid</p>
+            </div>
+            <div class="ltbox4">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>10</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>20</p>
+                </div>
+              </div>
+            </div>
+            <div class="ltbox5">
+              <div class="ltbox4bottom">
+                <div class="ltbox4left">
+                  <p>7</p>
+                </div>
+                <div class="ltbox4right">
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<link rel="stylesheet" href="css/jquery.range.css">
+<script src="js/jquery.range.js"></script>
+<script type="text/javascript">
+$('.range-slider').jRange({
+    from: 0,
+    to: 100,
+    step: 1,
+    scale: [0,25,50,75,100],
+    format: '%s',
+    width: 150,
+    showLabels: true,
+    isRange : true
+});
+
+
+$(".searchbox").keypress(function() {
+	$('.close_serch').show();
+});
+
+$('.close_serch').click(function (){
+	$(".searchbox").val('');
+	$('.close_serch').hide();
+});
+
+</script>
+</body>
+</html>
